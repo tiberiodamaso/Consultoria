@@ -131,3 +131,6 @@ dmypy.json
 # Migrations
 **/migrations
 .vscode/launch.json
+
+# Media
+**/media
