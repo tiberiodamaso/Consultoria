@@ -25,6 +25,9 @@ class RegistraUsuarioForm(UserCreationForm):
         self.fields['password1'].widget.attrs['class'] = 'form-control'
         self.fields['password2'].widget.attrs['class'] = 'form-control'
 
+        # TODO is_staff
+        # TODO adicionar CNPJ e nome do cliente
+
 
 class TrocaSenhaForm(PasswordChangeForm):
     old_password = forms.CharField(label='Senha antiga', min_length=8,

@@ -3,7 +3,7 @@ from usuarios.models import Usuario
 
 
 class Cliente(models.Model):
-    cnpj = models.CharField(verbose_name='CNPJ', max_length=14) # TODO: colocar validador
+    cnpj = models.CharField(verbose_name='CNPJ', max_length=14) # TODO: colocar validador e unique=true
     nome = models.CharField(verbose_name='Nome', max_length=100)
     responsavel = models.ForeignKey(Usuario, verbose_name='Responsável', related_name='clientes_responsavel', on_delete=models.CASCADE)
     criado = models.DateField(verbose_name='Criado', auto_now_add=True)
